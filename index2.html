@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال - مصمم جرافيك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>اسم المصمم</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="index2.html">معرض الأعمال</a>
+        </nav>
+    </header>
+
+    <section class="portfolio">
+        <h2>معرض التصاميم</h2>
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal('image1.jpg', 'وصف المشروع 1')">
+                <img src="1.jpg" alt="مشروع 1">
+                <p>مشروع 1</p>
+            </div>
+            <div class="gallery-item" onclick="openModal('image2.jpg', 'وصف المشروع 2')">
+                <img src="2.jpg" alt="مشروع 2">
+                <p>مشروع 2</p>
+            </div>
+            <div class="gallery-item" onclick="openModal('image2.jpg', 'وصف المشروع 2')">
+                <img src="7.jpg" alt="مشروع 2">
+                <p>مشروع 2</p>
+            </div>   
+        </div>
+    </section>
+    <section class="portfolio">
+        <h2>معرض الرسم</h2>
+
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal('image1.jpg', 'وصف المشروع 1')">
+                <img src="10.jpg" alt="مشروع 1">
+                <p>مشروع 1</p>
+            </div>
+            <div class="gallery-item" onclick="openModal('image1.jpg', 'وصف المشروع 1')">
+                <img src="8.jpg" alt="مشروع 1">
+                <p>مشروع 1</p>
+            </div>
+            <div class="gallery-item" onclick="openModal('image2.jpg', 'وصف المشروع 2')">
+                <img src="9.jpg" alt="مشروع 2">
+                <p>مشروع 2</p>
+            </div>
+            <div class="gallery-item" onclick="openModal('image2.jpg', 'وصف المشروع 2')">
+                <img src="15.jpg" alt="مشروع 2">
+                <p>مشروع 2</p>
+            </div> 
+            <div class="gallery-item" onclick="openModal('image1.jpg', 'وصف المشروع 1')">
+                <img src="8.jpg" alt="مشروع 1">
+                <p>مشروع 1</p>
+            </div>  
+        </div>
+    </section>
+
+    <!-- نافذة منبثقة (Modal) لعرض تفاصيل المشروع -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>للتواصل: <a href="mailto:email@example.com">email@example.com</a></p>
+        <p>© 2023 جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function openModal(imageSrc, description) {
+            document.getElementById("modal").style.display = "block";
+            document.getElementById("modalImg").src = imageSrc;
+            document.getElementById("caption").innerText = description;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
